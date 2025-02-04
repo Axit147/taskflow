@@ -14,7 +14,7 @@ export async function updateTask(
       .where(eq(tasks.id, taskId))
       .returning();
     return updatedTask[0];
-  } catch (error: any) {
+  } catch (error) {
     throw error;
   }
 }

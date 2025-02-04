@@ -1,17 +1,10 @@
 import React, { useState } from "react";
-import {
-  DialogClose,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-} from "./ui/dialog";
+import { DialogDescription, DialogHeader, DialogTitle } from "./ui/dialog";
 import { tasks } from "@/db/schema";
 import toast from "react-hot-toast";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { updateTask } from "@/lib/queries/updateTask";
 import { taskStore, useTasks } from "@/lib/stores/useTasks";
-import { Dialog } from "@radix-ui/react-dialog";
 
 const EditTaskForm = ({ task }: { task: typeof tasks.$inferInsert }) => {
   const [formData, setFormData] = useState<typeof tasks.$inferInsert>({

@@ -7,9 +7,9 @@ import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { taskStore, useTasks } from "@/lib/stores/useTasks";
 import { userStore, useUser } from "@/lib/stores/useUser";
 import { Plus } from "lucide-react";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
-const page = () => {
+const TaskPage = () => {
   const user = useUser((state: userStore) => state.user);
   const tasks = useTasks((state: taskStore) => state.tasks);
   const isPending = useTasks((state: taskStore) => state.isPending);
@@ -192,4 +192,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default TaskPage;

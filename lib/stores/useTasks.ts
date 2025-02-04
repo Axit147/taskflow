@@ -1,4 +1,4 @@
-import { tasks, users } from "@/db/schema";
+import { tasks } from "@/db/schema";
 import { create } from "zustand";
 
 export interface taskStore {

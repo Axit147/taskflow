@@ -11,7 +11,7 @@ export async function getTasks(userId: number) {
       .where(eq(tasks.userId, userId));
     console.log("get", userId);
     return userTasks;
-  } catch (error: any) {
+  } catch (error) {
     throw error;
   }
 }

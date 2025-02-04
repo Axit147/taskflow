@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
-import { DialogDescription, DialogHeader, DialogTitle } from "./ui/dialog";
+import React, { useState } from "react";
+import { DialogHeader, DialogTitle } from "./ui/dialog";
 import toast from "react-hot-toast";
 import { useMutation } from "@tanstack/react-query";
 import { createTask } from "@/lib/queries/createTask";

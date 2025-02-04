@@ -2,7 +2,6 @@
 
 import React, { useEffect, useState } from "react";
 import {
-  Home,
   CheckSquare,
   Calendar,
   Users,
@@ -17,7 +16,6 @@ import {
 import ThemeToggle from "./ThemeToggle";
 import { useRouter, usePathname } from "next/navigation";
 import { userStore, useUser } from "@/lib/stores/useUser";
-import { useMutation, useQueryClient } from "@tanstack/react-query";
 import toast from "react-hot-toast";
 
 const Sidebar = () => {

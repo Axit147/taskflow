@@ -1,11 +1,10 @@
 "use client";
 
 import React from "react";
-import { AlertTriangle, Clock, CheckCircle, Edit, Trash2 } from "lucide-react";
+import { AlertTriangle, CheckCircle, Edit, Trash2 } from "lucide-react";
 import { tasks } from "@/db/schema";
-import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
 import EditTaskForm from "./EditTaskForm";
-import { Dialog, DialogClose, DialogContent, DialogTrigger } from "./ui/dialog";
+import { Dialog, DialogContent, DialogTrigger } from "./ui/dialog";
 import toast from "react-hot-toast";
 import { useMutation } from "@tanstack/react-query";
 import { deleteTask } from "@/lib/queries/deleteTask";

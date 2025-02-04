@@ -10,7 +10,7 @@ export default async function signup(data: typeof users.$inferInsert) {
     });
 
     return await token.json();
-  } catch (error: any) {
+  } catch (error) {
     throw error;
   }
 }

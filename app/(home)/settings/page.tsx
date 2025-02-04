@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation";
 import React from "react";
 import toast from "react-hot-toast";
 
-const page = () => {
+const Settings = () => {
   const fetchUser = useUser((state: userStore) => state.fetchUser);
   const user = useUser((state: userStore) => state.user);
   const router = useRouter();
@@ -69,4 +69,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Settings;

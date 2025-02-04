@@ -7,7 +7,7 @@ export async function deleteTask(taskId: number) {
   try {
     const res = await db.delete(tasks).where(eq(tasks.id, taskId)).returning();
     return res[0].id;
-  } catch (error: any) {
+  } catch (error) {
     throw error;
   }
 }

@@ -5,10 +5,10 @@ import { userStore, useUser } from "@/lib/stores/useUser";
 import { QueryClient, useMutation } from "@tanstack/react-query";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import toast from "react-hot-toast";
 
-const page = () => {
+const LoginPage = () => {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const updateUserToken = useUser((state: userStore) => state.updateUserToken);
@@ -81,4 +81,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default LoginPage;

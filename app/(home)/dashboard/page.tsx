@@ -11,11 +11,11 @@ import {
 } from "recharts";
 import { CalendarClock, AlertCircle, CheckCircle } from "lucide-react";
 import { taskStore, useTasks } from "@/lib/stores/useTasks";
-import { differenceInBusinessDays, formatDistance } from "date-fns";
+import { differenceInBusinessDays } from "date-fns";
 import TaskCard from "@/components/TaskCard";
 import CardSkeleton from "@/components/CardSkeleton";
 
-const page = () => {
+const DashBoard = () => {
   const tasks = useTasks((state: taskStore) => state.tasks);
   const isTaskPending = useTasks((state: taskStore) => state.isPending);
 
@@ -220,4 +220,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default DashBoard;
