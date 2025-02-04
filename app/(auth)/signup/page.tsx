@@ -23,7 +23,7 @@ const page = () => {
       }
 
       toast.success("Account created successfully...");
-      router.push("/auth/login");
+      router.push("/login");
     },
   });
 
