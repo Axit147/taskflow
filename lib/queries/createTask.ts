@@ -6,7 +6,7 @@ export async function createTask(data: typeof tasks.$inferInsert) {
   try {
     const newTask = await db.insert(tasks).values(data).returning();
     return newTask[0];
-  } catch (error: any) {
+  } catch (error) {
     throw error;
   }
 }
