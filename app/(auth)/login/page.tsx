@@ -21,7 +21,7 @@ const LoginPage = () => {
     mutationFn: () => login(email, password),
     onSuccess: async (data) => {
       if (data.error) throw toast.error(data.error);
-      updateUserToken(data.token);
+      await updateUserToken(data.token);
       router.push("/dashboard");
       queryClient.invalidateQueries({ queryKey: ["user"] });
     },
