@@ -53,7 +53,7 @@ const Sidebar = () => {
     localStorage.removeItem("user");
     toast.success("Logged out successfully!");
     removeUser();
-    router.replace("/auth/login");
+    router.replace("/login");
   };
 
   useEffect(() => {
