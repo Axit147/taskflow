@@ -22,7 +22,7 @@ const LoginPage = () => {
     onSuccess: async (data) => {
       if (data.error) throw toast.error(data.error);
       await updateUserToken(data.token);
-      router.push("/dashboard");
+      router.replace("/dashboard");
       queryClient.invalidateQueries({ queryKey: ["user"] });
     },
   });
